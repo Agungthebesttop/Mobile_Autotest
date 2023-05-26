@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.9 on win32)" generated="20230526 07:15:53.199" rpa="false" schemaversion="3">
+<suite id="s1" name="SearchFlight" source="D:\FlightApp\SearchFlight.robot">
+<test id="s1-t1" name="User Searching a Flight" line="36">
+<kw name="Open Flight Application">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>newCommandTimeout=2500</arg>
+<arg>appActivity=${ACTIVITY_NAME}</arg>
+<arg>appPackage=${PACKAGE_NAME}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" starttime="20230526 07:15:53.401" endtime="20230526 07:16:02.103"/>
+</kw>
+<status status="PASS" starttime="20230526 07:15:53.401" endtime="20230526 07:16:02.103"/>
+</kw>
+<kw name="User Login with valid Credential">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//*//android.widget.Button[1]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230526 07:16:02.106" level="INFO">Clicking element 'xpath=//*//android.widget.Button[1]'.</msg>
+<msg timestamp="20230526 07:16:03.567" level="INFO">xpath criteria: //*//android.widget.Button[1]</msg>
+<status status="PASS" starttime="20230526 07:16:02.104" endtime="20230526 07:16:03.567"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230526 07:16:08.580" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230526 07:16:03.567" endtime="20230526 07:16:08.580"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.LinearLayout/android.widget.EditText[1]</arg>
+<arg>support@ngendigital.com</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20230526 07:16:08.583" level="INFO">Typing text 'support@ngendigital.com' into text field 'xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.LinearLayout/android.widget.EditText[1]'</msg>
+<msg timestamp="20230526 07:16:08.646" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.LinearLayout/android.widget.EditText[1]</msg>
+<status status="PASS" starttime="20230526 07:16:08.580" endtime="20230526 07:16:08.646"/>
+</kw>
+<kw name="Input Password" library="AppiumLibrary">
+<arg>xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.LinearLayout/android.widget.EditText[2]</arg>
+<arg>abc123</arg>
+<doc>Types the given password into text field identified by `locator`.</doc>
+<msg timestamp="20230526 07:16:08.648" level="INFO">Typing password into text field 'xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.LinearLayout/android.widget.EditText[2]'</msg>
+<msg timestamp="20230526 07:16:09.198" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.LinearLayout/android.widget.EditText[2]</msg>
+<status status="PASS" starttime="20230526 07:16:08.647" endtime="20230526 07:16:09.198"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//*//android.widget.Button</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230526 07:16:09.200" level="INFO">Clicking element 'xpath=//*//android.widget.Button'.</msg>
+<msg timestamp="20230526 07:16:09.786" level="INFO">xpath criteria: //*//android.widget.Button</msg>
+<status status="PASS" starttime="20230526 07:16:09.198" endtime="20230526 07:16:09.786"/>
+</kw>
+<status status="PASS" starttime="20230526 07:16:02.103" endtime="20230526 07:16:09.786"/>
+</kw>
+<kw name="User Search a Flight">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230526 07:16:11.790" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230526 07:16:09.787" endtime="20230526 07:16:11.790"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.Button[3]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230526 07:16:11.791" level="INFO">Clicking element 'xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.Button[3]'.</msg>
+<msg timestamp="20230526 07:16:11.884" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.Button[3]</msg>
+<status status="PASS" starttime="20230526 07:16:11.790" endtime="20230526 07:16:11.884"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230526 07:16:13.889" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230526 07:16:11.884" endtime="20230526 07:16:13.889"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.EditText</arg>
+<arg>DA935</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20230526 07:16:13.892" level="INFO">Typing text 'DA935' into text field 'xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.EditText'</msg>
+<msg timestamp="20230526 07:16:13.964" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.EditText</msg>
+<status status="PASS" starttime="20230526 07:16:13.889" endtime="20230526 07:16:13.964"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.Button</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230526 07:16:13.966" level="INFO">Clicking element 'xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.Button'.</msg>
+<msg timestamp="20230526 07:16:14.554" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.Button</msg>
+<status status="PASS" starttime="20230526 07:16:13.964" endtime="20230526 07:16:14.554"/>
+</kw>
+<status status="PASS" starttime="20230526 07:16:09.787" endtime="20230526 07:16:14.554"/>
+</kw>
+<status status="PASS" starttime="20230526 07:15:53.400" endtime="20230526 07:16:14.554"/>
+</test>
+<status status="PASS" starttime="20230526 07:15:53.200" endtime="20230526 07:16:14.556"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="SearchFlight">SearchFlight</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
